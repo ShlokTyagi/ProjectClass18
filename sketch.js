@@ -5,8 +5,7 @@ var gameState=1;
 
 var knife,fruit ,monster,fruitGroup,monsterGroup, score,r,randomFruit, position;
 var knifeImage , fruit1, fruit2 ,fruit3,fruit4, monsterImage, gameOverImage;
-var gameOverSound ,knifeSwoosh;
-
+var gameOverSound ,knifeSwooshSound;
 function preload(){
   
   knifeImage = loadImage("knife.png");
@@ -25,7 +24,6 @@ function preload(){
 
 function setup() {
   createCanvas(600, 600);
-  
   //creating sword
    knife=createSprite(40,200,20,20);
    knife.addImage(knifeImage);
@@ -45,7 +43,6 @@ function setup() {
 
 function draw() {
   background("lightblue");
-  
   if(gameState===PLAY){
     
     //Call fruits and Monster function
@@ -61,7 +58,7 @@ function draw() {
       fruitGroup.destroyEach();
       
        knifeSwooshSound.play();
-      // knifeSwooshSound.play;
+       //knifeSwooshSound.play;
       // knifeSwooshSound();
       // knifeSwooshSoundplay();
 
